@@ -1,0 +1,13 @@
+name: Get git tag
+description: Get current git tag from the GITHUB_REF environment variable
+branding:
+  icon: tag
+  color: blue
+outputs:
+  tag:
+    description: Git tag
+  tag-trimmed:
+    description: Git tag without the leading 'v' (if present)
+runs:
+  using: node16
+  main: index.js
