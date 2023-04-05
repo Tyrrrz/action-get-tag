@@ -1,6 +1,6 @@
 # GitHub Action: Get tag
 
-> 🟢 **Project status**: active<sup>[[?]](https://github.com/Tyrrrz/.github/blob/master/docs/project-status.md)</sup>
+> 🟡 **Project status**: maintenance mode<sup>[[?]](https://github.com/Tyrrrz/.github/blob/master/docs/project-status.md)</sup>
 
 GitHub Action that parses the current git tag from the `GITHUB_REF` environment variable.
 
@@ -10,7 +10,7 @@ GitHub Action that parses the current git tag from the `GITHUB_REF` environment 
 on:
   push:
     tags:
-      - "*"
+      - '*'
 
 jobs:
   main:
