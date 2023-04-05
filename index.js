@@ -9,13 +9,15 @@ const main = async () => {
     }
 
     if (!ref.startsWith('refs/tags/')) {
-      throw `Current ref ('${ref}') is not a tag`;
+      core.setFailed(`Current ref ('${ref}') is not a tag`);
+      return;
     }
+
+    core.info(`ref=${ref}`);
 
     const tag = ref.replace(/^refs\/tags\//, '');
     const tagTrimmed = tag.replace(/^v/, '');
 
-    core.info(`ref=${ref}`);
     core.info(`tag=${tag}`);
     core.info(`tagTrimmed=${tagTrimmed}`);
 
@@ -24,6 +26,6 @@ const main = async () => {
   } catch (error) {
     core.setFailed(error);
   }
-}
+};
 
 main();
