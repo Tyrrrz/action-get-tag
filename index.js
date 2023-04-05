@@ -1,6 +1,6 @@
 const core = require('@actions/core');
 
-async function main() {
+const main = async () => {
   try {
     const ref = process.env.GITHUB_REF;
 
